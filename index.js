@@ -5,7 +5,7 @@ const altitude = new altitudeCalculator();
 
 
 async function start() {
-    emmiter.on('AGLAltitude', (AGLAltitude) => {
+    altitude.on('AGLAltitude', (AGLAltitude) => {
         console.log('Got AGL Alt')
         console.log(AGLAltitude);
     })
