@@ -11,7 +11,10 @@ async function start() {
         console.log('Got AGL Alt')
         console.log(AGLAltitude);
     })
-    //await altitude.init();
+    senseHat.on('verticalSpeed', (verticalSpeed) => {
+        this.verticalSpeed = verticalSpeed;
+    })
+    await altitude.init();
     await senseHat.init();
 }
 
