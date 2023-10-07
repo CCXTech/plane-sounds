@@ -1,4 +1,15 @@
 const altitudeCalculator = require('./lib/altitudeCalculator');
+const emmiter = require('events');
 
 const altitude = new altitudeCalculator();
-altitude.init();
+
+
+async function start() {
+    emmiter.on('AGLAltitude', (AGLAltitude) => {
+        console.log('Got AGL Alt')
+        console.log(AGLAltitude);
+    })
+    await altitude.init();
+}
+
+start();
