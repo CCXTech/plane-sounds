@@ -13,6 +13,7 @@ async function start() {
     })
     senseHat.on('verticalSpeed', (verticalSpeed) => {
         this.verticalSpeed = verticalSpeed;
+        console.log('Got Vertical Speed' + verticalSpeed)
     })
     await altitude.init();
     await senseHat.init();
