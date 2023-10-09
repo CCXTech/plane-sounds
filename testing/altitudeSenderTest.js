@@ -5,8 +5,8 @@ class altitudeSender extends Emitter {
         super();
     }
 
-    async decendFrom3000() {
-        let altitude = 3000; // feet
+    async decendFrom1500() {
+        let altitude = 1500; // feet
         while (altitude > 0) {
             await this.sendAltitude(altitude);
             await this.sendVerticalSpeed(-600);
@@ -17,7 +17,7 @@ class altitudeSender extends Emitter {
     }
 
     async flyLevel(time) {
-        let altitude = 3000;
+        let altitude = 1500;
         let verticalSpeed = 0;
         while (time > 0) {
             await this.sendAltitude(altitude);
@@ -27,9 +27,9 @@ class altitudeSender extends Emitter {
         }
     }
 
-    async ascendTo3000() {
+    async ascendTo1500() {
         let altitude = 0;
-        while (altitude < 3000) {
+        while (altitude < 1500) {
             await this.sendAltitude(altitude);
             await this.sendVerticalSpeed(1500);
             altitude += 25;
