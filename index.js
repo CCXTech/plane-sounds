@@ -14,7 +14,7 @@ async function start() {
 }
 
 async function playInitialSound() {
-    await exec('ffplay -autoexit -nodisp' + filePrefix + 'init.mp3')
+    await exec('ffplay -autoexit -nodisp ' + filePrefix + 'init.mp3')
     console.log('Played init.mp3');
 }
 
