@@ -1,6 +1,6 @@
 const exec = require('child_process').exec;
 const path = require('path');
-const filePrefix = path.join(__dirname, './sounds/');
+const filePrefix = path.join(__dirname, 'sounds/');
 const annunciator = require('./lib/annunciator.js');
 
 async function start() {
@@ -14,7 +14,7 @@ async function start() {
 }
 
 async function playInitialSound() {
-    await exec('ffplay -autoexit ' + filePrefix + 'init.mp3')
+    await exec('ffplay -autoexit -nodisp' + filePrefix + 'init.mp3')
     console.log('Played init.mp3');
 }
 
