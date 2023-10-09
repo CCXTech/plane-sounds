@@ -1,6 +1,6 @@
 const exec = require('child_process').exec;
 const path = require('path');
-const filePrefix = path.join(__dirname, 'sounds/');
+const filePrefix = path.join(__dirname, './sounds/');
 const annunciator = require('./lib/annunciator.js');
 
 async function start() {
