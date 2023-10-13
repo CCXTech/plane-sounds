@@ -14,12 +14,12 @@
             const data = JSON.parse(txt.data);
             console.log(data);
             if (data.type === 'gpsData'){
-                document.querySelector('.lat-long__value').innerText = data.lat;
-                document.querySelector('.lat-long__value').innerText = data.long;
-                document.querySelector('.altitudes_msl__value').innerText = data.altitudeMSL;
-                document.querySelector('.altitudes_agl__value').innerText = data.altitudeAGL;
+                document.querySelector('.lat__value').innerText = data.lat;
+                document.querySelector('.long__value').innerText = data.lon;
+                document.querySelector('.altitudes_msl__value').innerText = data.MSLAltitude;
+                document.querySelector('.altitudes_agl__value').innerText = data.adjustedAGLAltitude;
                 document.querySelector('.elev__value').innerText = data.elevation;
-                document.querySelector('.numSat__value').innerText = data.numSat;
+                document.querySelector('.numSat__value').innerText = data.numSats;
                 document.querySelector('.gpsFix__value').innerText = data.gpsFix;
                 document.querySelector('.gpsHDOP__value').innerText = data.gpsHDOP;
                 document.querySelector('.gpsVDOP__value').innerText = data.gpsVDOP;
@@ -42,12 +42,12 @@
 <div class="lat-long">
     <h2>Position Data</h2>
     <div class="lat-long__lat">
-        <span class="lat-long__label">Latitude</span>
-        <span class="lat-long__value">0.00</span>
+        <span class="lat__label">Latitude</span>
+        <span class="lat__value">0.00</span>
     </div>
     <div class="lat-long__long">
-        <span class="lat-long__label">Longitude</span>
-        <span class="lat-long__value">0.00</span>
+        <span class="long__label">Longitude</span>
+        <span class="long__value">0.00</span>
     </div>
 </div>
 <div class="altitudes">
