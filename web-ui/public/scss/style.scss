@@ -1,0 +1,92 @@
+$timing: .6s;
+$ease: ease-in;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Mono', sans-serif;
+  background: #1a1a1a;
+}
+
+.recent-track {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  &__body {
+    display: inline-block;
+    padding-left: 2rem;
+  }
+
+  &__name,
+  &__artist,
+  &__album {
+    display: inline;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 14px;
+    position: relative;
+    display: flex;
+    span {
+      height: 100%;
+      width: 2px;
+      background: white;
+      transform-origin: bottom;
+      margin: 1px;
+      &:nth-child(1) {
+        animation: sound1 $timing infinite $ease;
+      }
+      &:nth-child(2) {
+        animation: sound2 $timing infinite $ease;
+      }
+      &:nth-child(3) {
+        animation: sound3 $timing infinite $ease;
+      }
+      &:nth-child(4) {
+        animation: sound4 $timing infinite $ease;
+      }
+    }
+  }
+}
+
+@keyframes sound1 {
+  20% {
+    transform: scaleY(.5);
+  }
+}
+
+@keyframes sound2 {
+  40% {
+    transform: scaleY(.5);
+  }
+}
+
+@keyframes sound3 {
+  60% {
+    transform: scaleY(.5);
+  }
+}
+
+@keyframes sound4 {
+  80% {
+    transform: scaleY(.5);
+  }
+}
