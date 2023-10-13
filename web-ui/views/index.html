@@ -11,8 +11,8 @@
 
         });
         socket.addEventListener('message', txt => {
-            console.log(txt);
             const data = JSON.parse(txt.data);
+            console.log(data);
             if (data.type === 'gpsData'){
                 document.querySelector('.lat-long__value').innerText = data.lat;
                 document.querySelector('.lat-long__value').innerText = data.long;
